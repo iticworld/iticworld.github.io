@@ -20,7 +20,7 @@ var novemberizing = {
 
                                 // Just naively convert to string for now
                                 // var dataString = (dataset[i].data[index].c === 1 ? "R("+dataset[i].data[index].v + ")" : "B("+dataset[i].data[index].v + ")");
-                                let dataString = (dataset.data[index].c === 1 ? "R("+dataset.data[index].v + ")" : "B("+dataset.data[index].v + ")");
+                                let dataString = dataset.data[index].v;
 
                                 // Make sure alignment settings are correct
                                 ctx.textAlign = 'center';
@@ -123,13 +123,13 @@ var novemberizing = {
                         radius: 3,
                         borderColor: '#FF0000',
                         backgroundColor: '#FF0000',
-                        data: json[0]
+                        data: Array.isArray(json) ? json[0] : json.r
                     }, {
                         label: "BLACK",
                         radius: 3,
                         borderColor: '#000000',
                         backgroundColor: '#000000',
-                        data: json[1]
+                        data: Array.isArray(json) ? json[1] : json.b
                     }]
                 };
                 if(parent !== undefined){
@@ -167,13 +167,20 @@ var novemberizing = {
                         }],
                     }
                 };
-                if(vertical !== undefined){
+                if(vertical !== undefined) {
                     options.scales.yAxes[0].ticks.min = 0;
                     options.scales.yAxes[0].ticks.max = vertical + 1;
+                } else if(json.vertical !== undefined){
+                    options.scales.yAxes[0].ticks.min = 0;
+                    options.scales.yAxes[0].ticks.max = json.vertical + 1;
                 }
+
                 if(horizontal !== undefined){
                     options.scales.xAxes[0].ticks.min = 0;
                     options.scales.xAxes[0].ticks.max = horizontal;
+                } else if(json.horizontal !== undefined) {
+                    options.scales.xAxes[0].ticks.min = 0;
+                    options.scales.xAxes[0].ticks.max = json.horizontal;
                 }
                 new Chart(context, {
                     type: 'scatter',
