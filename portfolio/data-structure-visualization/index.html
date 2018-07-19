@@ -17,7 +17,43 @@
 <body>
 <div align="center">
     <table width="800" cellpadding="=0" cellspacing="0" border="0">
-        <tr><td id="view"></td></tr>
+        <td>
+            <h1>DATA STRUCTURE VISUALIZATION</h1>
+        </td>
+        <tr>
+            <td id="view"></td>
+        </tr>
+        <tr>
+            <td>
+                <h2>RED BLACK TREE VISUALIZATION</h2>
+                <p>A simple visualization for red black tree.</p>
+                <p>
+                    <a href="https://github.com/iticworld/programming/tree/master/data.structure">repository</a>
+                    /
+                    <a href="http://kripken.github.io/emscripten-site/">emscripten</a>
+                    /
+                    <a href="https://www.chartjs.org/">chartjs</a>
+                    /
+                    c
+                </p>
+                <h3>HOW TO BUILD</h3>
+                <pre>wget https://raw.githubusercontent.com/novemberizing/javascript/master/novemberizing.js
+emcc main.c node.c tree.c util.c -o red.black.tree.js -s "EXTRA_EXPORTED_RUNTIME_METHODS=['Pointer_stringify']"</pre>
+                <h3>RED BLACK TREE</h3>
+                <p>self balancing binary search tree</p>
+                <ul>
+                    <li>A node is either red or black.</li>
+                    <li>The root and leaves(nil) are black.</li>
+                    <li>If a node is red, then its children are black.</li>
+                    <li>All paths from a node to its nil descendants contain the same number of black nodes.</li>
+                </ul>
+                <p>The longest path is no more than twice the length of the shortest path.</p>
+                <ul>
+                    <li>insert node and color it red and fix violation</li>
+                    <li>delete node and check sibling node and fix violation</li>
+                </ul>
+            </td>
+        </tr>
     </table>
 </div>
 <script>
