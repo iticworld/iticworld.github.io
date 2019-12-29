@@ -3,6 +3,11 @@ layout: page
 title: About
 ---
 
+## WHO AM I
+
+저는 개발자입니다. 프로그래밍을 접하고 이를 업으로 하면서 저는 무엇인가를 만들어내는 것에 흥미를 느끼고 즐거워 했습니다.
+
+
 <p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
