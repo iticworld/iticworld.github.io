@@ -1,0 +1,33 @@
+# DEPENDENCIES
+markdown:       kramdown
+highlighter:    rouge
+
+# PERMALINKS
+permalink:      pretty
+
+## PAGINATE
+paginate:       1
+
+## SETUP
+title:          DISCOMPLEXITY
+tagline:        'TO BE SIMPLE!'
+description:    'TO BE SIMPLE!'
+url:            https://discomplexity.github.io
+baseurl:        /
+
+author:
+  name:         'Hyunsik Park'
+  url:          https://twitter.com/iticworld
+
+# CUSTOM VARS
+version:        2.1.0
+
+github:
+  repo:         https://github.com/discomplexity
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - old
