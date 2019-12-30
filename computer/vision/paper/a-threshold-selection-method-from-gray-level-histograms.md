@@ -25,7 +25,67 @@ In this correpondence, our discussion will be confined to the elementary case of
 
 ## <a name="formulation" style="color: #000000;">Formulation</a>
 
-Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray levels
+Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray levels <math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mi>,</mi><mn>2</mn><mi>,</mi><mn>...</mn><mi>,</mi><mi>L</mi><mo stretchy="false">]</mo></mrow></semantics></math>. The number of pixels at level <math><mi>i</mi></math> is denoted by <math><msub><mi>n</mi><mi>i</mi></msub></math> and the total number of pixels by <math><semantics><mrow><mi>N</mi><mo stretchy="false">=</mo><mrow><msub><mi>n</mi><mn>1</mn></msub><mo stretchy="false">+</mo><msub><mi>n</mi><mn>2</mn></msub><mo stretchy="false">+</mo><mn>...</mn><mo stretchy="false">+</mo><msub><mi>n</mi><mi>L</mi></msub></mrow></mrow></semantics></math>. In order to simplify the discussion, the gray level histogram is noramlized and regarded as a probability distribution:
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>p</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy="false">=</mo>
+   <mrow>
+    <msub>
+     <mi>n</mi>
+     <mi>i</mi>
+    </msub>
+    <mo stretchy="false">/</mo>
+    <mi>N</mi>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">p_i = {n_i} / N</annotation>
+ </semantics>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>p</mi>
+    <mi>i</mi>
+   </msub>
+   <mo stretchy="false">≥</mo>
+   <mn>0</mn>
+  </mrow>
+ </semantics>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <munderover>
+     <mo stretchy="false">∑</mo>
+     <mrow>
+      <mi>i</mi>
+      <mo stretchy="false">=</mo>
+      <mn>1</mn>
+     </mrow>
+     <mi>L</mi>
+    </munderover>
+    <msub>
+     <mi>p</mi>
+     <mi>i</mi>
+    </msub>
+   </mrow>
+   <mo stretchy="false">=</mo>
+   <mn>1</mn>
+  </mrow>
+ </semantics>
+</math>
+
+
 
 작성중
 
@@ -37,7 +97,7 @@ The method proposed in the foregoing affords further means to analyze imporant a
 
 For the selected threshold <math><mi>k</mi></math>, the class probabilities equation 2 and equation 3, respectively, indicate the portions of the areas occupised by classes in the picture so thresholded. The class means (4) and (5) serves as estimates of the mean levels of the classes in the original gray level picture.
 
-The maximum value n(k), denoted simply of n, can be used as a measture to evaluate the separability of classes (or ease of thresholding) for the original picture of bimodality of the histogram. 
+The maximum value n(k), denoted simply of n, can be used as a measture to evaluate the separability of classes (or ease of thresholding) for the original picture of bimodality of the histogram.
 
 이 방법은 최적의 임계 값 선택하는 것 이외 중요한 측면을 분석하는 추가적인 수간을 제공합니다.
 선택된 임계값에 대하여, 분류의 확률에 관한 식 (2) 와 식 (3)은 임계값이 적용된 그림에서 분류를 의해 점유된 영역의 부분으로 나타납니다. 등급의 평균 (4) 와 (5)는 원래의 그레이 레벨 그림에서 등급의 평균 수준의 추정치 역할을 합니다. 간단히 n 으로 표시되는 최대 값 n(k) 는 히스토그램의 이원성의 원래 그림에 대한 클래스의 분리성(또는 임계값의 용이성)을 평기하기 위한 척도로 사용될 수 있습니다.
