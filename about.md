@@ -34,9 +34,8 @@ python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 ## CURRICULUM VITAE
 
 - [2018/08 – 2019/04 / COLLABEE TEAM / BACKEND DEVELOPER](#collabee)
-- 2018/01 – 2018/05 / TEXTORY / ANDROID DEVELOPER
-- 2018/01 – 2018/05 / TEXTORY / ANDROID DEVELOPER
-- 2017/02 – 2017/12 / INNOTICON LABS / FULL STACK DEVELOPER
+- [2018/01 – 2018/05 / TEXTORY / ANDROID DEVELOPER](#textory)
+- [2017/02 – 2017/12 / INNOTICON LABS / FULL STACK DEVELOPER](#innoticon)
 - 2016/06 – 2016/10 / ANYFI / DEVELOPER
 - 2012/03 – 2016/05 / INFOBANK / DEVELOPER
 - 2011/06 – 2011/08 / CONVENIUM / DEVELOPER
@@ -52,7 +51,8 @@ python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 
 __메인업무__
 
-- 웹소켓서버 안정화 및 동시 편집 문서 서버 개발
+- 웹소켓서버 안정화
+- 동시 편집 문서 서버 개발
 
 __기타작업__
 
@@ -63,12 +63,30 @@ __기타작업__
 
 __경험 기술__
 
-AWS, MYSQL, SPRING BOOT, PYTHON, NODEJS, JAVASCRIPT, DOCKER
+AWS, MYSQL, SPRING BOOT, PYTHON, NODEJS, JAVASCRIPT, DOCKER, PROSEMIRROR, IMAGE CONVERTING, DOCUMENT CONVERTING
 
 __링크__
 
 [콜라비팀에서의 회고](/review/collabee/)
 
+### <a name="textory">TEXTORY</a>
 
+텍스토리에서 안드로이드 개발 업무를 담당했습니다.
 
-### TEXTORY
+__메인업무__
+
+- 안드로이드 어플리케이션의 성능 향상
+
+__기타작업__
+
+- C 기반의 TCP/IP 소켓 라이브러리
+
+__경험기술__
+
+android telephony(sms, mms, lms), java8, realm, tcp/ip socket network lib
+
+__링크__
+
+[텍스토리에서의 회고](/review/textory)
+
+### <a name="innoticon">INNOTICON LABS</a>
