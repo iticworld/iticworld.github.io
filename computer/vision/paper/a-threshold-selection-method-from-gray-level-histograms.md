@@ -9,6 +9,7 @@ _NOBUYUKI OTSU_
 [Abstract](#abstract)
 [Introduction](#introduction)
 [Formulation](#formulation)
+[Discussion and Remarks](#discussion)
 
 ## <a name="abstract" style="color: #000000;">Abstract</a>
 
@@ -21,6 +22,28 @@ It is important in picture processing to select an adequate threshold of gray le
 In any event, no "goodness" of threshold has been evaluated in most of the methods so far proposed. This would imply that it could be the right way of deriving an optimal thresholding method to establish an apprpriate criterion for evaluating the "goodness" of threshold from a more general standpoint.
 
 In this correpondence, our discussion will be confined to the elementary case of threshold selection where only the gray level histogram suffices without other a prior knowledge. It is not only important as a standard technique in picture processing, but also essential for unsupversied decision problems in pattern recognition. A new method is proposed from the viewpoint of discrimiant analysis; it directly approaches the feasibility of evaluating the "goodness" of threshold and automatically selecting an optimal threshold.
+
+## <a name="formulation" style="color: #000000;">Formulation</a>
+
+Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray levels
+
+작성중
+
+## <a name="discussion" style="color: #000000;">Discussion and Remarks</a>
+
+### A. Analysis of further important aspects
+
+The method proposed in the foregoing affords further means to analyze imporant aspects other than selecting optimal thresholds.
+
+For the selected threshold <math><mi>k</mi></math>, the class probabilities equation 2 and equation 3, respectively, indicate the portions of the areas occupised by classes in the picture so thresholded. The class means (4) and (5) serves as estimates of the mean levels of the classes in the original gray level picture.
+
+The maximum value n(k), denoted simply of n, can be used as a measture to evaluate the separability of classes (or ease of thresholding) for the original picture of bimodality of the histogram. 
+
+이 방법은 최적의 임계 값 선택하는 것 이외 중요한 측면을 분석하는 추가적인 수간을 제공합니다.
+선택된 임계값에 대하여, 분류의 확률에 관한 식 (2) 와 식 (3)은 임계값이 적용된 그림에서 분류를 의해 점유된 영역의 부분으로 나타납니다. 등급의 평균 (4) 와 (5)는 원래의 그레이 레벨 그림에서 등급의 평균 수준의 추정치 역할을 합니다. 간단히 n 으로 표시되는 최대 값 n(k) 는 히스토그램의 이원성의 원래 그림에 대한 클래스의 분리성(또는 임계값의 용이성)을 평기하기 위한 척도로 사용될 수 있습니다.
+
+
+
 
 화상 분할을 위한 비모수적이며 비지도적으로 자동 임계 값을 선택하는 방법을 제시합니다.
 그레이 레벨을 기준으로 분리성을 최대화하여 분류하는 판별 기준으로 선택된 최적희 임계 값입니다.
@@ -44,9 +67,15 @@ In this correpondence, our discussion will be confined to the elementary case of
 이 보고서는 다른 선행되는 지식 없이 그레이 레빌 히스토그램만으로 충분한 임계값 선택의 기본 경우로 제한할 것입니다. 이것은 이미지 프로세싱의 표준작업으로도 중요하며, 패턴인식의 비지도 의사결정 문제에서도 필수적입니다.
 이 새로운 방법은 판별 분석의 관점을 보여줄 것입니다. 즉 최적의 임계값을 자동으로 선택하고 임계 값의 좋음을 판별하기 위한 가능성에 직접적인 접근입니다.
 
-## <a name="formulation" style="color: #000000;">Formulation</a>
+----
 
-Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray levels 
+작성 필요
+
+----
+
+앞에서 제안된 이 방법은 최적의 임계 값 선택을 위한 것보다 더 중요한 측면을 분석할 수 있는 수단을 제공합니다.
+
+----
 
 | discriminant    | 판별 수단, 판별식 |
 | criterion       | 기준, 평가, 심사, 조건, 자격 |
@@ -68,3 +97,5 @@ Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray
 | confined        | 국한, 제한된, 갇힌, 수감, 묶인 |
 | suffice         | 충분하다, 만족시키다. 족하다. |
 | elementary      | 기본적인, 기초적인, 초보의 |
+| foregoing       | 앞서 말한, 앞서 말한 것, 앞의 |
+| afford          | 여우가 있다. 할 수 있다 |
