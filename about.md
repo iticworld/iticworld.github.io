@@ -6,7 +6,11 @@ permalink: /about/
 
 DECEMBER 30, 2019
 
-## WHO AM I
+<a href="#who-am-i">HYUNSIK PARK</a>
+
+## <a name="who-am-i" style="color: #000000;">WHO AM I</a>
+
+<br />
 
 저는 개발자입니다.
 
@@ -27,29 +31,44 @@ python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 - [Custom Reactive Lib](https://github.com/iticworld/reactive-lib/)
 - [Data Structure Visualization - Red Black Tree](/project/data-structure-visualization/)
 
+## CURRICULUM VITAE
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+- [2018/08 – 2019/04 / COLLABEE TEAM / BACKEND DEVELOPER](#collabee)
+- 2018/01 – 2018/05 / TEXTORY / ANDROID DEVELOPER
+- 2018/01 – 2018/05 / TEXTORY / ANDROID DEVELOPER
+- 2017/02 – 2017/12 / INNOTICON LABS / FULL STACK DEVELOPER
+- 2016/06 – 2016/10 / ANYFI / DEVELOPER
+- 2012/03 – 2016/05 / INFOBANK / DEVELOPER
+- 2011/06 – 2011/08 / CONVENIUM / DEVELOPER
+- 2008/09 – 2009/04 / UNIWIS / DEVELOPER
+- 2007/03 – 2008/05 / NORICORP / DEVELOPER
+- 2006/04 – 2007/02 / GAYA / DEVELOPER
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## OFFICIAL EXPERIENCE
 
-There are currently two themes built on Poole:
+### <a name="collabee">COLLABEE</a>
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+콜라비팀에서 백엔드 개발 업무를 담당했습니다.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+__메인업무__
 
-## Setup
+- 웹소켓서버 안정화 및 동시 편집 문서 서버 개발
 
-Some fun facts about the setup of this project include:
+__기타작업__
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+- 데이터베이스 쿼리 튜닝
+- 이미지 변환 서버 안정화
+- 문서 변환 서버 안정화
+- API 전수 검수를 위한 파이썬 스크립트 부분적 적용
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
+__경험 기술__
 
-Thanks for reading!
+AWS, MYSQL, SPRING BOOT, PYTHON, NODEJS, JAVASCRIPT, DOCKER
+
+__링크__
+
+[콜라비팀에서의 회고](/review/collabee/)
+
+
+
+### TEXTORY

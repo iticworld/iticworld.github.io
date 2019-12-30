@@ -14,7 +14,6 @@ A simple visualization of red black tree.
 - [EMSCRIPTEN](https://emscripten.org/)
 - [CHARTJS](https://www.chartjs.org/)
 - [REPOSITORY](https://github.com/iticworld/dev/tree/master/project/data-structure-visualization)
-- C
 
 <div id = "view"></div>
 
