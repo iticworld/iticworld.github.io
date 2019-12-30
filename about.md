@@ -1,11 +1,31 @@
 ---
 layout: page
-title: About
+title: "HYUNSIK PARK - JUST DEVELOPER"
+permalink: /about/
 ---
+
+DECEMBER 30, 2019
 
 ## WHO AM I
 
-저는 개발자입니다. 프로그래밍을 접하고 이를 업으로 하면서 저는 무엇인가를 만들어내는 것에 흥미를 느끼고 즐거워 했습니다.
+저는 개발자입니다.
+
+프로그램을 접하고 무엇인가 주어진 문제를 해결하고 그것을 사람들이 유용하게 사용할 수 있는 것을 보고 즐거워했습니다.
+가끔은 힘이 들고 지칠 때도 있었지만, 여전히 무엇인가를 구현해내는 것을 즐거워합니다.
+
+## FEATURED SKILL
+
+c/c++, java, javascript, linux, android, redis, tcp/ip socket programming, reactive x, uml
+
+### ETC EXPERIENCED SKILL
+
+python, apache kafka, firebase, mysql, opencv, opengl, emscripten
+
+## PERSONNEL PROJECT
+
+- [Make bootable iso image using hexadeciaml editor](/project/make-bootable-iso-image-using-hexadecimal-editor/)
+- [Custom Reactive Lib](https://github.com/iticworld/reactive-lib/)
+- [Data Structure Visualization - Red Black Tree](/project/data-structure-visualization/)
 
 
 <p class="message">
