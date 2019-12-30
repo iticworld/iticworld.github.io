@@ -6,6 +6,8 @@ permalink: /about/
 
 DECEMBER 30, 2019
 
+----
+
 [WHO AM I](#who-am-i)<br />
 [FEATURED SKILL](#featured-skill)<br />
 [PERSONNEL PROJECT](#personnel-project)<br />
