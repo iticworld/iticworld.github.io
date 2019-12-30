@@ -32,9 +32,9 @@ DECEMBER 30, 2019
 
 c/c++, java, javascript, linux, android, redis, tcp/ip socket programming, reactive x, uml
 
-### ETC EXPERIENCED SKILL
+__기타 경험한 기술__
 
-python, apache kafka, firebase, mysql, opencv, opengl, emscripten
+python, apache kafka, firebase, mysql, opencv, opengl, emscripten, tcp/ip stack, ffmpeg, rabbitmq, curl
 
 ----
 
@@ -62,7 +62,7 @@ python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 
 ## <a name="official-experience" style="color: #000000;">OFFICIAL EXPERIENCE</a>
 
-### <a name="collabee">COLLABEE</a>
+### <a name="collabee" style="color: #000000;">COLLABEE</a>
 
 콜라비팀에서 백엔드 개발 업무를 담당했습니다.
 
@@ -84,7 +84,7 @@ AWS, MYSQL, SPRING BOOT, PYTHON, NODEJS, JAVASCRIPT, DOCKER, PROSEMIRROR, IMAGE 
 
 ----
 
-### <a name="textory">TEXTORY</a>
+### <a name="textory" style="color: #000000;">TEXTORY</a>
 
 텍스토리에서 안드로이드 개발 업무를 담당했습니다.
 
@@ -102,7 +102,7 @@ android telephony(sms, mms, lms), java8, realm, tcp/ip socket network lib
 
 ----
 
-### <a name="innoticon">INNOTICON LABS</a>
+### <a name="innoticon" style="color: #000000;">INNOTICON LABS</a>
 
 이노티콘랩스에서는 풀스택 개발자로 일했습니다.
 
@@ -145,7 +145,7 @@ __상세설명__
 
 ----
 
-### <a name="anyfi">ANYFI</a>
+### <a name="anyfi" style="color: #000000;">ANYFI</a>
 
 안드로이드 개발 업무를 진행하였습니다.
 
@@ -169,7 +169,7 @@ __상세설명__
 
      tcp/ip, nio, android
 
-### <a name="infobank">INFOBANK</a>
+### <a name="infobank" style="color: #000000;">INFOBANK</a>
 
 인포뱅크에서 개발자 업무를 담당했습니다.
 
@@ -213,7 +213,7 @@ __상세설명__
 
 ----
 
-### <a name="convenium">CONVENIUM</a>
+### <a name="convenium" style="color: #000000;">CONVENIUM</a>
 
 개발자
 
@@ -224,7 +224,7 @@ __상세설명__
 
 ----
 
-### <a name="uniwis">UNIWIS</a>
+### <a name="uniwis" style="color: #000000;">UNIWIS</a>
 
 개발자
 
@@ -236,7 +236,7 @@ __상세설명__
 
    - MYSQL TO MSSQL 변환 작업
 
-### <a name="noricorp">NORICORP</a>
+### <a name="noricorp" style="color: #000000;">NORICORP</a>
 
 개발자
 
@@ -244,7 +244,7 @@ __상세설명__
 
 2. 2D 네트워크 보드게임 1개 서버/클라이언트 신규 구현
 
-### <a name="gaya">GAYA</a>
+### <a name="gaya" style="color: #000000;">GAYA</a>
 
 개발자
 
