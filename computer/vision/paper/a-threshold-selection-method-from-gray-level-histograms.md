@@ -85,6 +85,502 @@ Let the pixels of a given picture be represented in <math><mi>L</mi></math> gray
  </semantics>
 </math>
 
+Now suppose that we dichotomize the pixels into two classes <math><semantics><msub><mi>C</mi><mn>0</mn></msub></semantics></math> and <math><semantics><msub><mi>C</mi><mn>1</mn></msub></semantics></math> (background and objects, or vice versa) by a threshold at level <math><mi>k</mi></math>; <math><semantics><msub><mi>C</mi><mn>0</mn></msub></semantics></math> denotes pixels with levels <math><semantics><mrow><mo stretchy="false">[</mo><mn>1</mn><mi>,</mi><mn>2</mn><mi>,</mi><mn>...</mn><mi>,</mi><mi>k</mi><mo stretchy="false">]</mo></mrow></semantics></math>, and <math><semantics><msub><mi>C</mi><mn>1</mn></msub></semantics></math> denotes pixels with levels <math><semantics><mrow><mo stretchy="false">[</mo><mrow><mi>k</mi><mo stretchy="false">+</mo><mn>1</mn></mrow><mi>,</mi><mrow><mi>k</mi><mo stretchy="false">+</mo><mn>2</mn></mrow><mi>,</mi><mn>...</mn><mi>,</mi><mi>L</mi><mo stretchy="false">]</mo></mrow></semantics></math>. Then the probabilities of class occurrence and the class mean levels, respectively, are given by
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>ϖ</mi>
+     <mn>0</mn>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">Pr</mi>
+   </mrow>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <msub>
+       <mi>C</mi>
+       <mn>0</mn>
+      </msub>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+     </munderover>
+     <msub>
+      <mi>P</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mi>ϖ</mi>
+   </mrow>
+   <mrow>
+    <mo fence="true" stretchy="false">(</mo>
+    <mrow>
+     <mi>k</mi>
+    </mrow>
+    <mo fence="true" stretchy="false">)</mo>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%varpi _ 0 = Pr( C_0 ) = sum from { i = 1 } to k { P_i } = %varpi( k )</annotation>
+ </semantics>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>ϖ</mi>
+     <mn>1</mn>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">Pr</mi>
+   </mrow>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <msub>
+       <mi>C</mi>
+       <mn>1</mn>
+      </msub>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mrow>
+        <mi>k</mi>
+        <mo stretchy="false">+</mo>
+        <mn>1</mn>
+       </mrow>
+      </mrow>
+      <mi>L</mi>
+     </munderover>
+     <msub>
+      <mi>P</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <mn>1</mn>
+     <mo stretchy="false">−</mo>
+     <mi>ϖ</mi>
+    </mrow>
+   </mrow>
+   <mrow>
+    <mo fence="true" stretchy="false">(</mo>
+    <mrow>
+     <mi>k</mi>
+    </mrow>
+    <mo fence="true" stretchy="false">)</mo>
+   </mrow>
+  </mrow>
+ </semantics>
+</math>
+
+and
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>μ</mi>
+     <mn>0</mn>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+     </munderover>
+     <mrow>
+      <mi>i</mi>
+      <mi mathvariant="italic">Pr</mi>
+      <mrow>
+       <mo fence="true" stretchy="false">(</mo>
+       <mrow>
+        <mrow>
+         <mi>i</mi>
+         <mi mathvariant="normal">|</mi>
+         <msub>
+          <mi>C</mi>
+          <mn>0</mn>
+         </msub>
+        </mrow>
+       </mrow>
+       <mo fence="true" stretchy="false">)</mo>
+      </mrow>
+     </mrow>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+     </munderover>
+     <mrow>
+      <mi>i</mi>
+      <mrow>
+       <msub>
+        <mi>p</mi>
+        <mi>i</mi>
+       </msub>
+       <mo stretchy="false">/</mo>
+       <msub>
+        <mi>ϖ</mi>
+        <mn>0</mn>
+       </msub>
+      </mrow>
+     </mrow>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mi>μ</mi>
+   </mrow>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <mi>k</mi>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">/</mo>
+    <mi>ϖ</mi>
+   </mrow>
+   <mrow>
+    <mo fence="true" stretchy="false">(</mo>
+    <mrow>
+     <mi>k</mi>
+    </mrow>
+    <mo fence="true" stretchy="false">)</mo>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%mu _ 0 = sum from { i = 1 } to k { i Pr( i %Ux007C C_0 ) } = sum from { i = 1 } to k { i p_i / %varpi _ 0 } = %mu ( k ) / %varpi ( k )</annotation>
+ </semantics>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>μ</mi>
+    <mn>1</mn>
+   </msub>
+   <mo stretchy="false">=</mo>
+   <mrow>
+    <munderover>
+     <mo stretchy="false">∑</mo>
+     <mrow>
+      <mi>i</mi>
+      <mo stretchy="false">=</mo>
+      <mrow>
+       <mi>k</mi>
+       <mo stretchy="false">+</mo>
+       <mn>1</mn>
+      </mrow>
+     </mrow>
+     <mi>L</mi>
+    </munderover>
+    <mrow>
+     <mi>i</mi>
+     <mi mathvariant="italic">Pr</mi>
+     <mrow>
+      <mo fence="true" stretchy="false">(</mo>
+      <mrow>
+       <mrow>
+        <mi>i</mi>
+        <mi mathvariant="normal">|</mi>
+        <msub>
+         <mi>C</mi>
+         <mn>1</mn>
+        </msub>
+       </mrow>
+      </mrow>
+      <mo fence="true" stretchy="false">)</mo>
+     </mrow>
+    </mrow>
+   </mrow>
+   <mo stretchy="false">=</mo>
+   <mrow>
+    <munderover>
+     <mo stretchy="false">∑</mo>
+     <mrow>
+      <mi>i</mi>
+      <mo stretchy="false">=</mo>
+      <mrow>
+       <mi>k</mi>
+       <mo stretchy="false">+</mo>
+       <mn>1</mn>
+      </mrow>
+     </mrow>
+     <mi>L</mi>
+    </munderover>
+    <mrow>
+     <mi>i</mi>
+     <mrow>
+      <msub>
+       <mi>p</mi>
+       <mi>i</mi>
+      </msub>
+      <mo stretchy="false">/</mo>
+      <msub>
+       <mi>ϖ</mi>
+       <mn>1</mn>
+      </msub>
+     </mrow>
+    </mrow>
+   </mrow>
+   <mo stretchy="false">=</mo>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <msub>
+       <mi>μ</mi>
+       <mi>T</mi>
+      </msub>
+      <mo stretchy="false">−</mo>
+      <mi>μ</mi>
+     </mrow>
+     <mrow>
+      <mo fence="true" stretchy="false">(</mo>
+      <mrow>
+       <mi>k</mi>
+      </mrow>
+      <mo fence="true" stretchy="false">)</mo>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow>
+      <mn>1</mn>
+      <mo stretchy="false">−</mo>
+      <mi>ϖ</mi>
+     </mrow>
+     <mrow>
+      <mo fence="true" stretchy="false">(</mo>
+      <mrow>
+       <mi>k</mi>
+      </mrow>
+      <mo fence="true" stretchy="false">)</mo>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+ </semantics>
+</math>
+
+where
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mi>ϖ</mi>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <mi>k</mi>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+     </munderover>
+     <msub>
+      <mi>p</mi>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%varpi ( k ) = sum from {  i = 1 } to { k } { p _ i }</annotation>
+ </semantics>
+</math>
+
+and
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mi>μ</mi>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <mi>k</mi>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>k</mi>
+     </munderover>
+     <mrow>
+      <mi>i</mi>
+      <msub>
+       <mi>p</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+    </mrow>
+   </mrow>
+  </mrow>
+ </semantics>
+</math>
+
+are the zeroth- and first-order cumulative moments of the histogram up the <math><mi>k</mi></math>th level, respectively, and
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>μ</mi>
+     <mi>T</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mi>μ</mi>
+   </mrow>
+   <mrow>
+    <mrow>
+     <mo fence="true" stretchy="false">(</mo>
+     <mrow>
+      <mi>L</mi>
+     </mrow>
+     <mo fence="true" stretchy="false">)</mo>
+    </mrow>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <munderover>
+      <mo stretchy="false">∑</mo>
+      <mrow>
+       <mi>i</mi>
+       <mo stretchy="false">=</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>L</mi>
+     </munderover>
+     <mrow>
+      <mi>i</mi>
+      <msub>
+       <mi>p</mi>
+       <mi>i</mi>
+      </msub>
+     </mrow>
+    </mrow>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%mu _ T = %mu ( L ) = sum from { i = 1 } to {  L } { i p_i }</annotation>
+ </semantics>
+</math>
+
+is the total mean level of the original picture. We can easily verify toe following relation for any choice of <math><mi>k</mi></math>:
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <msub>
+    <mi>ϖ</mi>
+    <mn>0</mn>
+   </msub>
+   <mrow>
+    <msub>
+     <mi>μ</mi>
+     <mn>0</mn>
+    </msub>
+    <mo stretchy="false">+</mo>
+    <msub>
+     <mi>ϖ</mi>
+     <mn>1</mn>
+    </msub>
+   </mrow>
+   <mrow>
+    <msub>
+     <mi>μ</mi>
+     <mn>1</mn>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msub>
+     <mi>μ</mi>
+     <mi>t</mi>
+    </msub>
+   </mrow>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%varpi _ 0 %mu _ 0 + %varpi _ 1 %mu _ 1 = %mu _ t</annotation>
+ </semantics>
+</math>
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+ <semantics>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>ϖ</mi>
+     <mn>0</mn>
+    </msub>
+    <mo stretchy="false">+</mo>
+    <msub>
+     <mi>ϖ</mi>
+     <mn>1</mn>
+    </msub>
+   </mrow>
+   <mo stretchy="false">=</mo>
+   <mn>1</mn>
+  </mrow>
+  <annotation encoding="StarMath 5.0">%varpi _ 0 + %varpi _ 1 = 1</annotation>
+ </semantics>
+</math>
+
+The class variances are given by
+
+
 
 
 작성중
