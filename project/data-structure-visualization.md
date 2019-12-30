@@ -13,7 +13,7 @@ A simple visualization of red black tree.
 
 - [EMSCRIPTEN](https://emscripten.org/)
 - [CHARTJS](https://www.chartjs.org/)
-- [REPOSITORY]()
+- [REPOSITORY](https://github.com/iticworld/dev/tree/master/project/data-structure-visualization)
 - C
 
 <div id = "view"></div>
@@ -21,7 +21,7 @@ A simple visualization of red black tree.
 ## HOW TO BUILD
 
 ```
-wget https://raw.githubusercontent.com/novemberizing/javascript/master/novemberizing.js
+wget https://github.com/iticworld/dev/blob/master/project/data-structure-visualization/novemberizing.js
 emcc main.c node.c tree.c util.c -o red.black.tree.js -s "EXTRA_EXPORTED_RUNTIME_METHODS=['Pointer_stringify']"
 ```
 
