@@ -22,6 +22,10 @@ DECEMBER 30, 2019
 프로그램을 접하고 무엇인가 주어진 문제를 해결하고 그것을 사람들이 유용하게 사용할 수 있는 것을 보고 즐거워했습니다.
 가끔은 힘이 들고 지칠 때도 있었지만, 여전히 무엇인가를 구현해내는 것을 즐거워합니다.
 
+<a href="https://github.com/iticworld"><img width="30" src="/public/img/github.svg"></a>
+
+----
+
 ## <a name="featured-skill" style="color: #000000;">FEATURED SKILL</a>
 
 c/c++, java, javascript, linux, android, redis, tcp/ip socket programming, reactive x, uml
@@ -30,11 +34,15 @@ c/c++, java, javascript, linux, android, redis, tcp/ip socket programming, react
 
 python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 
+----
+
 ## <a name="personnel-project" style="color: #000000;">PERSONNEL PROJECT</a>
 
 - [Make bootable iso image using hexadeciaml editor](/project/make-bootable-iso-image-using-hexadecimal-editor/)
 - [Custom Reactive Lib](https://github.com/iticworld/reactive-lib/)
 - [Data Structure Visualization - Red Black Tree](/project/data-structure-visualization/)
+
+----
 
 ## <a name="curriculum-vitae" style="color: #000000;">CURRICULUM VITAE</a>
 
@@ -47,6 +55,8 @@ python, apache kafka, firebase, mysql, opencv, opengl, emscripten
 - [2008/09 – 2009/04 / UNIWIS / DEVELOPER](#uniwis)
 - [2007/03 – 2008/05 / NORICORP / DEVELOPER](#noricorp)
 - [2006/04 – 2007/02 / GAYA / DEVELOPER](#gaya)
+
+----
 
 ## <a name="official-experience" style="color: #000000;">OFFICIAL EXPERIENCE</a>
 
@@ -239,6 +249,8 @@ __상세설명__
 1. 인사/노무 관리 시스템 구현
 
 2. 홈페이지 제작 및 유지 보수
+
+----
 
 ## <a name="personnel-experience" style="color:#000000;">PERSONNEL EXPERIENCE</a>
 
