@@ -42,9 +42,39 @@
   <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 
   <!-- REACT -->
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> -->
   <!-- Don't use this in production: -->
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 
+  <!-- OPENCV -->
+  <script type="text/javascript">
+    var q = [];
+    var initialized = false;
+    function onOpenCvReady()
+    {
+      cv['onRuntimeInitialized'] = () => {
+        initialized = true;
+        if(q && q.length > 0)
+        {
+          q.forEach(f => f());
+          q = undefined;
+        }
+      };
+    }
+    function dispatch(f)
+    {
+      if(!initialized)
+      {
+        console.log('dispatch');
+        q.push(f);
+      }
+      else
+      {
+        console.log('run');
+        f();
+      }
+    }
+  </script>
+  <script async src="/public/js/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
 </head>
