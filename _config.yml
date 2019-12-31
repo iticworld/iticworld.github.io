@@ -31,3 +31,5 @@ plugins:
 
 exclude:
   - old
+  - TODO.md
+  - note
