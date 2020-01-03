@@ -363,6 +363,42 @@ _addition_
 
 By varying <math><semantics><mi>α</mi></semantics></math> from <math><semantics><mrow><mn>0</mn><mo stretchy="false">→</mo><mn>1</mn></mrow></semantics></math>, this operator can be used to perform a temporal cross-dissolve between two images or videos.
 
+__INPUT__
+
+<img width="213" height="320" id="pixel-transform-linear-blend-input-first" src="/assets/images/first.jpg"> <img width="213" height="320" id="pixel-transform-linear-blend-input-second" src="/assets/images/second.jpg">
+
+__OUTPUT__
+
+<canvas id="pixel-transform-linear-blend-output" width="213" height="320" style="border: 1px solid #000000;"></canvas>
+
+<script type="text/javascript">
+  let value = 0.0;
+  function pixel_transform_linear_blend_perform() {
+    let input = [
+      cv.imread('pixel-transform-linear-blend-input-first'),
+      cv.imread('pixel-transform-linear-blend-input-second')
+    ];
+    let output = new cv.Mat();
+    cv.addWeighted(input[0], 1.0 - value, input[1], value, -1, output);
+    cv.imshow('pixel-transform-linear-blend-output', output);
+    input[0].delete();
+    input[1].delete();
+    output.delete();
+  }
+  function pixel_transform_lineear_blend_once() {
+    if(value < 1.0) {
+      pixel_transform_linear_blend_perform();
+      value += 0.05;
+      setTimeout(pixel_transform_lineear_blend_once, 100);
+    }
+  }
+  function pixel_transform_lineear_blend_run() {
+    dispatch(() => pixel_transform_lineear_blend_once());
+  }
+</script>
+
+<button onclick="pixel_transform_lineear_blend_run()">run</button>
+
 <a name="pixel-transform-gamma-correction"></a>
 ### GAMMA CORRECTION
 
