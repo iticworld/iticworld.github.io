@@ -12,7 +12,7 @@ paginate:       1
 title:          DISCOMPLEXITY
 tagline:        'TO BE SIMPLE!'
 description:    'TO BE SIMPLE!'
-url:            https://discomplexity.github.io
+url:            https://iticworld.github.io
 baseurl:        /
 
 author:
@@ -23,7 +23,7 @@ author:
 version:        2.1.0
 
 github:
-  repo:         https://github.com/discomplexity
+  repo:         https://github.com/iticworld
 
 plugins:
   - jekyll-feed
