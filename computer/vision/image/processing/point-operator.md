@@ -10,6 +10,8 @@ The simplest kinds of image processing transforms are point operators, where eac
 &nbsp;&nbsp;[MULTIPLICATION AND ADDITION - LINEAR](#pixel-transform-multiplication-addition)<br />
 &nbsp;&nbsp;[LINEAR BLEND - LINEAR](#pixel-transform-linear-blend)<br />
 &nbsp;&nbsp;[GAMMA CORRECTION - NON-LINEAR](#pixel-transform-gamma-correction)<br />
+[COLOR TRANSFORM](#color-transform)<br />
+&nbsp;&nbsp;[COMPOSITING AND MATTING](#compositing-matting)<br />
 
 <a name="pixel-transform"></a>
 ## PIXEL TRANSFORM
@@ -445,6 +447,18 @@ __OUTPUT__
 </math>
 
 where a gamma value of <math><semantics><mrow><mi>γ</mi><mo stretchy="false">≈</mo><mn>2.2</mn></mrow></semantics></math> is a reasonable fit for most digital cameras.
+
+<a name="#color-transform"></a>
+## COLOR TRANSFORM
+
+While color images can be treated as arbitrary vector-valued functions or collections of independent bands, it usually make sense to think about them as highly correlated signals with strong connections to the image formation process.
+
+In fact, adding the same value to each color channel not only increase the apparent intensity of each pixel, it can also affect the pixel's hue and saturation.
+
+<a name="#compositing-matting"></a>
+## COMPOSITING AND MATTING
+
+The process of extracting the object from the original image is often called matting, while the process of inserting it into another image (without visible artifacts) is called compositing.
 
 
 | radiance | 광휘, 찬란한 빛, 빛 |
