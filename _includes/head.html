@@ -15,11 +15,19 @@
   </title>
 
   <style type="text/css">
+    .MathJax {
+      font-size: 3.3em;
+    }
+    mjx-container {
+      font-size: 3.3em;
+    }
       .nmathematics: {
           margin-bottom: 10px;
           padding-bottom: 10px;
       }
   </style>
+
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="/public/css/poole.css">
@@ -110,5 +118,12 @@
     google.charts.load('current', {'packages':['corechart']});
     google.charts.setOnLoadCallback(googleChartOnLoad);
   </script>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  CommonHTML: {
+    scale: 130
+  }
+});
+</script>
 
 </head>
