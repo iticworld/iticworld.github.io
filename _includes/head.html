@@ -76,12 +76,39 @@
       }
     }
   </script>
+  <!--
   <script async src="/public/js/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  -->
   <!-- GOOGLE CHART -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <!-- WEBRTC -->
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
   <script src="/public/js/three.js"></script>
+
+  <script>
+    var _chart = [];
+    var initialized = false;
+    function googleChartOnLoad() {
+      initialized = true;
+      if(initialized) {
+        if(_chart && _chart.length > 0)
+        {
+          _chart.forEach(f => f());
+        }
+      }
+    }
+    function dispatchChart(f) {
+      if(!initialized) {
+        _chart.push(f);
+      }
+      else
+      {
+        f();
+      }
+    }
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(googleChartOnLoad);
+  </script>
 
 </head>
