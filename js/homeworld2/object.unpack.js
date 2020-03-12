@@ -565,6 +565,7 @@ function vertices(primitive, root, mask, stream) {
     let total = root.uinteger32(stream);
     for(let i = 0; i < total; i++)
     {
+        console.log("vertex");
         let vertex = {};
         vertex.color = [0, 0, 0, 0];
         vertex.position = [0, 0, 0, 0];
@@ -646,6 +647,7 @@ function singlemesh(root, stream) {
     o.level = root.uinteger32(stream);
     o.primitives = [];
     const total = root.uinteger32(stream);
+    console.log("singlemesh");
     for(let i = 0; i < total; i++)
     {
         const index = root.uinteger32(stream);

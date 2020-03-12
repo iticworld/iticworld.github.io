@@ -574,14 +574,19 @@ var ObjectFile = /*#__PURE__*/function () {
 
         w.onmessage = function (event) {
           if (event.data.version) {
+            console.log("version");
             o.__version = event.data.version;
           } else if (event.data.category) {
+            console.log("category");
             o.__category = event.data.category;
-          } else if (event.data.material) {// TODO: DATA TO MATERIAL CLASS
+          } else if (event.data.material) {
+            console.log("material"); // TODO: DATA TO MATERIAL CLASS
             // o.__materials.set(event.data.material.name, event.data.material);
-          } else if (event.data.texture) {// TODO: DATA TO TEXTURE CLASS
+          } else if (event.data.texture) {
+            console.log("texture"); // TODO: DATA TO TEXTURE CLASS
             // o.__textures.set(event.data.texture.name, event.data.texture);
           } else if (event.data.multimesh) {
+            console.log("multimesh");
             var multimesh = new _multimesh_js__WEBPACK_IMPORTED_MODULE_1__["default"](event.data.multimesh.name, event.data.multimesh.parent, _x_graphics_obj_js__WEBPACK_IMPORTED_MODULE_5__["default"].enable);
             event.data.multimesh.children.forEach(function (_singlemesh) {
               var singlemesh = new _singlemesh_js__WEBPACK_IMPORTED_MODULE_3__["default"](_singlemesh.level, multimesh.status);
@@ -610,6 +615,7 @@ var ObjectFile = /*#__PURE__*/function () {
             //     multimesh.status = Obj.enable;
             // }
           } else if (event.data.goblinmesh) {
+            console.log("goblinmesh");
             var goblinmesh = new _goblinmesh_js__WEBPACK_IMPORTED_MODULE_2__["default"](event.data.goblinmesh.name, event.data.goblinmesh.parent, _x_graphics_obj_js__WEBPACK_IMPORTED_MODULE_5__["default"].enable);
             goblinmesh.singlemesh = new _singlemesh_js__WEBPACK_IMPORTED_MODULE_3__["default"](event.data.goblinmesh.singlemesh.level, goblinmesh.status);
             event.data.goblinmesh.singlemesh.primitives.forEach(function (_primitive) {
@@ -625,18 +631,27 @@ var ObjectFile = /*#__PURE__*/function () {
             });
             o.goblinmesh.set(goblinmesh.name, goblinmesh);
           } else if (event.data.joints) {
+            console.log("joints");
             event.data.joints.forEach(function (_joint) {
               var joint = new _joint_js__WEBPACK_IMPORTED_MODULE_8__["default"](_joint.name, _joint.parent, _joint.position, _joint.rotation, _joint.scale, _joint.axis, _joint.freedom);
               o.joints.set(joint.name, joint);
             });
-          } else if (event.data.engineshape) {// console.log({engineshape: event.data.engineshape});
-          } else if (event.data.engineburn) {// console.log({engineburn: event.data.engineburn});
-          } else if (event.data.navlights) {// console.log({navlights: event.data.navlights});
-          } else if (event.data.marker) {// console.log({marker: event.data.marker});
-          } else if (event.data.boundary) {// console.log({boundary: event.data.boundary});
-          } else if (event.data.collision) {// console.log({collision: event.data.collision});
-          } else if (event.data.basicmesh) {// console.log({basicmesh: event.data.basicmesh});
-          } else if (event.data.information) {// console.log({information: event.data.information});
+          } else if (event.data.engineshape) {
+            console.log("engineshape"); // console.log({engineshape: event.data.engineshape});
+          } else if (event.data.engineburn) {
+            console.log("engineburn"); // console.log({engineburn: event.data.engineburn});
+          } else if (event.data.navlights) {
+            console.log("navlights"); // console.log({navlights: event.data.navlights});
+          } else if (event.data.marker) {
+            console.log("marker"); // console.log({marker: event.data.marker});
+          } else if (event.data.boundary) {
+            console.log("boundary"); // console.log({boundary: event.data.boundary});
+          } else if (event.data.collision) {
+            console.log("collision"); // console.log({collision: event.data.collision});
+          } else if (event.data.basicmesh) {
+            console.log("basicmesh"); // console.log({basicmesh: event.data.basicmesh});
+          } else if (event.data.information) {
+            console.log("information"); // console.log({information: event.data.information});
           } else if (event.data.finish) {
             if (event.data.error) {
               w.terminate();
@@ -855,6 +870,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _surface_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./surface.js */ "./x/js/x/graphics/surface.js");
 /* harmony import */ var _core_executor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/executor.js */ "./x/js/x/core/executor.js");
 /* harmony import */ var _objects_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./objects.js */ "./x/js/x/graphics/objects.js");
+/* harmony import */ var _matrix_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./matrix.js */ "./x/js/x/graphics/matrix.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -872,6 +888,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -938,7 +955,7 @@ var Application = /*#__PURE__*/function (_Executor) {
       this.gl.clearColor(this.background[0], this.background[1], this.background[2], this.background[3]);
       this.gl.clear(this.gl.COLOR_BUFFER_BIT | this.gl.COLOR_DEPTH_BIT);
 
-      this.__objects.render(this.gl);
+      this.__objects.render(this.gl, _matrix_js__WEBPACK_IMPORTED_MODULE_3__["default"].identity(), 0);
     }
   }, {
     key: "shader",
@@ -1699,9 +1716,9 @@ var Objects = /*#__PURE__*/function () {
     }
   }, {
     key: "render",
-    value: function render(gl) {
+    value: function render(gl, model, level) {
       this.__objects.forEach(function (o) {
-        o.render(gl);
+        o.render(gl, model, level);
       });
     }
   }]);
